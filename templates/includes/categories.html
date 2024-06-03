@@ -1,0 +1,11 @@
+{% load category_tags %}
+
+<div class="container py-3">
+    {% get_categories as categories%}
+    <h5>Категории:</h5>
+    {% for category in categories %}
+      <p>
+        <a class="btn btn-secondary" href="{% url 'projects:category' category.slug %}" role="button">{{ category }}</a>
+      </p>
+    {% endfor %}
+</div>
