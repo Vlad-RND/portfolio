@@ -1,13 +1,13 @@
 from http import HTTPStatus
 
-from django.views.generic import TemplateView
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
-from projects.models import Skill, Project
+from projects.models import Project, Skill
 
 
 class InfoPage(TemplateView):
-    "Подготовка данных для страницы 'О себе'"
+    """Подготовка данных для страницы 'О себе'."""
 
     template_name = 'pages/info.html'
 
@@ -20,12 +20,12 @@ class InfoPage(TemplateView):
 
 
 def page_not_found(request, exception):
-    "Обработка страницы с ошибкой 404"
+    """Обработка страницы с ошибкой 404."""
     return render(request, 'pages/404.html', status=HTTPStatus.NOT_FOUND)
 
 
 def server_error(request, *args, **argv):
-    "Обработка страницы с ошибкой 500"
+    """Обработка страницы с ошибкой 500."""
     return render(
         request,
         'pages/500.html',

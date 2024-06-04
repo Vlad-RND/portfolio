@@ -2,11 +2,11 @@ from django.contrib import admin
 from django.contrib.auth.models import Group
 from django.utils.safestring import mark_safe
 
-from .models import Skill, Project, Category
+from .models import Category, Project, Skill
 
 
 class NameSearch(admin.ModelAdmin):
-    "Класс для получения кол-ва использований и добавления поля name"
+    """Класс для получения кол-ва использований и добавления поля name."""
 
     list_display = ('name',)
     search_fields = ('name',)
@@ -21,7 +21,7 @@ class NameSearch(admin.ModelAdmin):
 
 @admin.register(Project)
 class ProjectAdmin(NameSearch):
-    "Настройка отображения модели project"
+    """Настройка отображения модели project."""
 
     list_display = NameSearch.list_display + (
         'pub_date', 'category', 'get_skills',
@@ -45,14 +45,14 @@ class ProjectAdmin(NameSearch):
 
 @admin.register(Skill)
 class SkillAdmin(NameSearch):
-    "Настройка отображения модели skill"
+    """Настройка отображения модели skill."""
 
     list_display = NameSearch.list_display + ('get_uses',)
 
 
 @admin.register(Category)
 class CategoryAdmin(NameSearch):
-    "Настройка отображения модели Category"
+    """Настройка отображения модели Category."""
 
     list_display = NameSearch.list_display + ('slug', 'get_uses',)
 

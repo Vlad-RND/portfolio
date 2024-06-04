@@ -1,6 +1,5 @@
-"""
-Django settings for portfolio project.
-"""
+"""Django settings for portfolio project."""
+
 import os
 from pathlib import Path
 

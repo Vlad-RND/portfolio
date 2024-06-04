@@ -32,7 +32,7 @@ class SlugNameModel(NameModel):
 
 
 class Category(SlugNameModel):
-    """Модель категории"""
+    """Модель категории."""
 
     class Meta:
         verbose_name = 'категория'
@@ -44,7 +44,7 @@ class Category(SlugNameModel):
 
 
 class Skill(SlugNameModel):
-    """Модель навыка"""
+    """Модель навыка."""
 
     class Meta:
         verbose_name = 'навык'

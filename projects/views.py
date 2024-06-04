@@ -1,12 +1,12 @@
-from django.views.generic import ListView, DetailView
 from django.shortcuts import get_object_or_404
+from django.views.generic import DetailView, ListView
 
 from .constants import PROJECTS_LIMIT
 from .models import Category, Project, Skill
 
 
 class ProjectPaginateTemplate(ListView):
-    "Класс-родитель для добавления полей"
+    """Класс-родитель для добавления полей."""
 
     model = Project
     template_name = 'projects/index.html'
@@ -14,13 +14,13 @@ class ProjectPaginateTemplate(ListView):
 
 
 class IndexListView(ProjectPaginateTemplate):
-    "Отображение главной страницы"
+    """Отображение главной страницы."""
 
     pass
 
 
 class CategoryListView(ProjectPaginateTemplate):
-    "Оторбражение страницы с фильтрацией по категории"
+    """Оторбражение страницы с фильтрацией по категории."""
 
     def get_queryset(self):
         return get_object_or_404(
@@ -29,7 +29,7 @@ class CategoryListView(ProjectPaginateTemplate):
 
 
 class SkillListView(ProjectPaginateTemplate):
-    "Оторбражение страницы с фильтрацией по умению"
+    """Оторбражение страницы с фильтрацией по умению."""
 
     def get_queryset(self):
         return get_object_or_404(
@@ -38,7 +38,7 @@ class SkillListView(ProjectPaginateTemplate):
 
 
 class ProjectDitailView(DetailView):
-    "Оторбражение страницы конкретного проекта"
+    """Оторбражение страницы конкретного проекта."""
 
     model = Project
     template_name = 'projects/detail.html'

@@ -1,4 +1,5 @@
 from django import template
+
 from projects.models import Category
 
 register = template.Library()
