@@ -10,8 +10,9 @@
 навыков, которые были использованы в процессе работы.
 
 ### Используемые библиотеки:
-asgiref==3.8.1, Django==4.2, django-bootstrap5==24.2, django-cleanup==8.1.0,
-pillow==10.3.0, python-dotenv==1.0.1, sqlparse==0.5.0, tzdata==2024.1
+asgiref==3.8.1, Django==4.2, django-bootstrap5==24.2, django-cleanup==8.1.0, flake8==7.0.0, flake8-docstrings==1.7.0, 
+flake8-import-order==0.18.2, flake8-quotes==3.4.0, mccabe==0.7.0, pillow==10.3.0, pycodestyle==2.11.1, pydocstyle==6.3.0, 
+pyflakes==3.2.0, python-dotenv==1.0.1, setuptools==70.0.0, snowballstemmer==2.2.0, sqlparse==0.5.0, tzdata==2024.1
 
 ### Как запустить проект:
 
